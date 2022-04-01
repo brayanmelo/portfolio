@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html {
+    --bg:rgb(31, 31, 31);
+    --bg-box: rgba(44, 44, 44, 0.295);
+    --color-font: rgb(252, 252, 252);
+    --color-box-white: rgba(241, 241, 241, 0.384);
+    --color-top: #5463ff;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg)
+}
+
+/* -------- CHANGE THEME --------- */
+
+body.white {
+    background-color: var(--color-font)
+}
+body.white a {
+    color: var(--bg)
+}
+body.white .box-center{
+    background-color: var(--color-box-white);
+}
+body.white .line {
+    border-top: 1px solid rgba(2, 2, 2, 0.336);
+}
+body.white .skills {
+    background-color: var(--color-box-white);
+}
+body.white .about-me{
+    background-color: var(--color-box-white);
+}
+body.white h1 {
+    color: var(--bg);
+}
+body.white h2 {
+    color: var(--bg);
+}
+body.white h3 {
+    color: var(--bg);
+}
+body.white p {
+    color: var(--bg);
+}
+body.white .socials {
+    background-color: var(--color-box-white);
+}
+body.white .socials a {
+    color: var(--bg);
+}
+body.white .form-box{
+    background-color: var(--color-box-white);
+}
+body.white footer {
+    background-color: var(--color-box-white);
+}
+
+/* -------- CHANGE THEME FIM --------- */
+
+/* -------- MENU --------- */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;   
+}
+.menu a {
+    margin: 8px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.938);
+}
+a.white {
+    color: rgba(0, 0, 0, 0.938)
+}
+.menu a:hover {
+    font-weight: 800;
+}
+header {
+    position: relative;
+}
+
+/* -------- MENU FIM--------- */
+
+
+/*-------------- BUTTON --------------*/
+
+.switch {
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-font);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color-top);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider {
+    background-color: var(--bg-box);
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/*-------------- BUTTON FIM--------------*/
+
+
+ /*------------------- MAIN -------------------*/
+
+ .box-center {
+    height: 45%;
+    margin-bottom: 5% ;
+    background-color: var(--bg-box);
+    border-radius: 10px;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+}
+.left-side h1 {
+    color: var(--color-font);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    animation-duration: 1s;  
+}
+.left-side h1 span {
+    color: var(--color-top);
+}
+.left-side p {
+    color: rgba(240, 248, 255, 0.705);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    animation-duration: 1s;  
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+form input {
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.input-box {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;   
+}
+.button {
+    background-color: var(--color-top);
+    color: var(--color-font);
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px #3d4dfa;
+}
+.box-center img {
+    display: none;
+}
+.skills {
+    background-color: var(--bg-box);
+    color: var(--color-font);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5% ;
+}
+.skills .tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.skills .tech-card h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* BARRA PORCENTAGEM */
+
+.container-barra {
+    margin-top: 20px;
+    width: 100%;
+    height: 15px;
+    background-color: var(--bg);
+    border-radius: 8px;
+}
+.skills .tech-card .barra-html {
+    width: 85%;
+    border-radius: 8px;
+    height: 15px;
+    background-color:rgb(247, 97, 11);
+    animation-name: barra;
+    animation-duration: 2s;
+    box-shadow: 0px 0px 4px rgb(247, 97, 11);
+}
+.skills .tech-card .barra-html:after {
+    content: "85%";
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    margin-right: 5px;
+}
+@keyframes barra{
+    from{
+        width: 0;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+.skills .tech-card .barra-css {
+    width: 70%;
+    border-radius: 8px;
+    height: 15px;
+    background-color:rgb(48, 121, 255);
+    animation-name: barra-css;
+    animation-duration: 2s;
+    box-shadow: 0px 0px 4px rgb(48, 121, 255);
+}
+.skills .tech-card .barra-css:after {
+    content: "70%";
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    margin-right: 5px;
+}
+@keyframes barra-css{
+    from{
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+
+}.skills .tech-card .barra-js {
+    width: 50%;
+    border-radius: 8px;
+    height: 15px;
+    background-color:rgb(212, 201, 41);
+    animation-name: barra-js;
+    animation-duration: 2s;
+    box-shadow: 0px 0px 4px rgb(212, 201, 41)
+}
+.skills .tech-card .barra-js:after {
+    content: "50%";
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+@keyframes barra-js{
+    from{
+        width: 0;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+/* FIM DA BARRA PORCENTAGEM */
+
+
+.about-me {
+    background-color: var(--bg-box);
+    color: var(--color-font);
+    border-radius: 10px;
+    height: 20%;
+    padding: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5% ;
+}
+.about-me img {
+    display: none;
+}
+.about-me .right-text h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.about-me .right-text h3 {
+    font-size: 12px;
+    opacity: 70%;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.about-me .right-text p {
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+.socials {
+    background-color: var(--bg-box);
+    color: var(--color-font);
+    border-radius: 10px;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.socials h2 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.socials .midias {
+    margin-top: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socials .midias a {
+    text-decoration: none;
+    margin: 0 20px;
+    color: aliceblue;
+    font-size: 2.5rem;
+    opacity: 0.8;
+}
+.socials .midias a:hover {
+    opacity: 1;
+}
+footer {
+    background-color: var(--bg-box);
+    color: var(--color-font);
+    border-radius: 10px;
+    height: 20%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5% ;
+}
+footer h3 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+
+/* -------- PAGE CONTATE-ME --------- */
+
+.form-box {
+    height: 45%;
+    background-color: var(--bg-box);
+    border-radius: 10px;
+    padding: 50px;
+    width: 100%;
+    margin-bottom: 3%;
+}
+.content-form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-form-box h2 {
+    color: var(--color-font);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.content-form-box form {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.content-form-box form input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+}
+.content-form-box form textarea {
+    width: 90%;
+    max-width: 90%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+.content-form-box form button {
+    background-color: var(--color-top);
+    color: var(--color-font);
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 800;
+    box-shadow: 0px 0px 15px #3d4dfa;
+    margin-top: 25px;
+    width: 40%;
+    max-width: 60%;
+    cursor: pointer;
+}
+
+
+/* -------- FIM PAGE CONTATE-ME --------- */
+
+
+/* -------- RESPONSIVE --------- */
+
+@media screen and (min-width: 1280px) {
+
+    .container {
+        width: 65%;
+        margin: 0 auto;
+    }
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .menu a {
+        margin: 25px;
+    }
+    .switch {
+        position: absolute;
+        top: 38px;
+        right: 180px;       
+      }
+    .box-center {
+        padding: 50px;
+        margin-bottom: 3%;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .box-center img {
+        display: inline-block;
+        position: absolute;
+        bottom: 0px;
+        right: 50px;
+        opacity: 90%;
+    }
+    .left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+    }
+    .left-side h1 {
+        font-size: 2.9rem;
+        margin: 0px;
+    }
+    .left-side p {
+        margin-top: 15px;
+    }
+    .skills {
+        justify-content: space-around;
+        margin-bottom: 3%;
+    }
+    .socials {
+        margin-bottom: 3%;
+    }
+    .about-me {
+        height: 350px;
+        position: relative;
+        justify-content: flex-end;
+        margin-bottom: 3% ;
+    }
+    .about-me .right-text {
+        width: 50%;
+    }
+    .about-me .right-text h2 {
+        font-size: 40px;
+    }
+    .about-me img {
+        display: inline-block;
+        position: absolute;
+        bottom: 0px;
+        left: 80px;
+        opacity: 90%;
+    }
+
+    /* PAGE CONTATE-ME*/
+
+    .content-form-box {
+        display: flex;
+        flex-direction: row;
+    }
+    .content-form-box form {
+        width: 65%;
+    }
+    .content-form-box h2 {
+        font-size: 3.5rem;
+    }
+    .content-form-box form .btn {
+        max-width: 30%;
+    }
+}
