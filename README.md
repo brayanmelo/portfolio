@@ -1,5 +1,5 @@
 
-# Portifólio Brayan Melo
+# Portfólio Brayan Melo
 
 Breve projeto para pôr em prática meus conhecimentos nas tecnologias front-end.
 
